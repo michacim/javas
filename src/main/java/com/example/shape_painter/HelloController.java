@@ -1,9 +1,6 @@
 package com.example.shape_painter;
 
-import com.example.shape_painter.factory.CircleCreator;
-import com.example.shape_painter.factory.RectangleCreator;
-import com.example.shape_painter.factory.ShapeCreator;
-import com.example.shape_painter.factory.TriangleCreator;
+import com.example.shape_painter.factory.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
@@ -23,13 +20,14 @@ public class HelloController {
             case "Kreis" -> new CircleCreator(canvas);
             case "Rechteck" -> new RectangleCreator(canvas);
             case "Dreieck" -> new TriangleCreator(canvas);
+            case "MichaCircle" -> new MichaCircleCreator(canvas);
             default -> null;
         };
     }
 
     @FXML
     void initialize(){
-        shapeSelector.getItems().addAll("Kreis", "Rechteck", "Dreieck");
+        shapeSelector.getItems().addAll("Kreis", "Rechteck", "Dreieck","MichaCircle");
     }
     @FXML
      void onShow(ActionEvent actionEvent) {
