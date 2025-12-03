@@ -13,8 +13,17 @@
 
 * >>>> pullrequest github
 * local branch löschen
+### nach abgeschlossenen Pullrequests
+git checkout main
+git pull origin main
+git branch -d my_feature_branch
+git push origin --delete my_feature_branch
 
 6. git log --oneline --all --graph
+
+
+
+
 ## Git Kommandos
 * welche branches gibt es?
   * git branch
